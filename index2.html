@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    bim-viewport {
+      border-radius: 1rem;
+      border: 2px solid;
+    }
+
+    bim-viewport[name='view-3d'] {
+      border-color: red;
+    }
+
+    bim-viewport[name='view-2d'] {
+      border-color: green;
+    }
+
+    bim-viewport[name='animation-4d'] {
+      border-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <bim-grid style="gap: 1rem; padding: 1rem;">
+    <bim-viewport name="view-3d">
+      <bim-grid floating></bim-grid>
+    </bim-viewport>
+    <bim-viewport name="view-2d">
+      <bim-grid floating></bim-grid>
+    </bim-viewport>
+    <bim-viewport name="animation-4d"></bim-viewport>
+  </bim-grid>
+  <script type="module" src="./index2.ts"></script>
+</body>
+
+</html>
